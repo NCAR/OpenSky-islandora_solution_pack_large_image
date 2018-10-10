@@ -31,8 +31,22 @@
         <?php print $islandora_content; ?>
       </div>
     <?php endif; ?>
+
+
   </div>
   <div class="islandora-large-image-metadata">
+
+<br/>
+<?php if (isset($islandora_object['JPG'])): ?>
+<?php print l('Download Medium Sized Image (JPG)', "islandora/object/{$islandora_object}/datastream/JPG/download"); ?>
+          <?php endif; ?>
+<br/>
+<?php if (isset($islandora_object['OBJ'])): ?>
+<?php print l('Download Full Sized Image (TIFF)', "islandora/object/{$islandora_object}/datastream/OBJ/download"); ?>
+          <?php endif; ?>
+<br/>
+<br/>
+
     <?php print $description; ?>
     <?php if ($parent_collections): ?>
       <div>
